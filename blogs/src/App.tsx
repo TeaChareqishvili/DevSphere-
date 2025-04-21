@@ -1,13 +1,12 @@
-import ThemeSwitcher from "./components/ThemeSwitcher";
+import Header from "./components/Header";
 import { ThemeContext } from "./Theme/ThemeProvider";
 import { useContext } from "react";
 
 function App() {
   const { theme } = useContext(ThemeContext);
   return (
-    <div className={theme}>
-      <ThemeSwitcher />
-      <p>teeext coloor changee!!!</p>
+    <div className={`App ${theme}`}>
+      <Header />
     </div>
   );
 }
