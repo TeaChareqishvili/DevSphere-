@@ -3,32 +3,43 @@
   margin: 0;
   box-sizing: border-box;
   list-style: none;
+  text-decoration: none;
 }
 
 /* fonts */
 
 @font-face {
-  font-family: "playWrite-italic";
+  font-family: "italic";
   src: url("./assets/fonts/Playwrite_AU_SA/static/PlaywriteAUSA-Regular.ttf")
     format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url("./assets/fonts/Roboto/static/Roboto-Black.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "serif";
+  src: url("./assets/fonts/PT_Serif/PTSerif-Regular.ttf") format("truetype");
   font-weight: normal;
 }
 
 body,
 .App {
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 .light {
-  --text-color: #333;
   background-color: #dee2e6;
-  color: var(--text-color);
+  color: #10474f;
 }
 
 .header-light {
   background-color: #ced4da;
-  color: #333;
+  color: #10474f;
 }
 
 .header-night {
@@ -77,9 +88,90 @@ body,
   display: flex;
   align-items: center;
 }
-.navigation-nav li {
+
+.navigation-list {
   margin: 0 20px;
   cursor: pointer;
-  font-family: "playWrite-italic";
+  font-family: "italic";
   letter-spacing: 1.6px;
+}
+
+/* blogs */
+
+.blog-container {
+  width: 80%;
+  margin: auto;
+  padding: 40px 20px;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.blog {
+  max-width: 350px;
+  width: 100%;
+  margin: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.blog-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px;
+  position: relative;
+}
+
+.blog-content h1 {
+  font-size: 18px;
+  font-family: "italic";
+}
+
+.blog-image {
+  max-width: 300px;
+  height: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.blog-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+.blog-image:hover img {
+  transform: scale(1.6);
+}
+.description {
+  font-size: 16px;
+  margin: 5px 0;
+  font-family: "roboto";
+}
+
+.content {
+  width: 250px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: relative;
+  font-family: "serif";
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-style: italic;
+}
+
+.link {
+  font-family: "italic";
+  color: #fa94aa;
+  font-size: 12px;
+}
+.link:hover {
+  text-decoration: underline;
 }
