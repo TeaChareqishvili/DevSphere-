@@ -1,7 +1,13 @@
+import ThemeSwitcher from "./components/ThemeSwitcher";
+import { ThemeContext } from "./Theme/ThemeProvider";
+import { useContext } from "react";
+
 function App() {
+  const { theme } = useContext(ThemeContext);
   return (
-    <div className="bg-black  w-[80%] h-[300px] text-[34px]">
-      <div className="bg-blue-500 text-white p-4">Hello, Tailwind!</div>
+    <div className={theme}>
+      <ThemeSwitcher />
+      <p>teeext coloor changee!!!</p>
     </div>
   );
 }
