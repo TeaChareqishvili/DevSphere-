@@ -3,7 +3,7 @@ import { ArticleTypes } from "./useFetchSportData";
 
 function useFetchHistoryArticles() {
   const [articles, setArticles] = useState<ArticleTypes[]>([]);
-  const apiKey = "f1aca3bad53841af94f6e9fd2ec6392f";
+  const apiKey = process.env.REACT_APP_NEWS_API_KEY;
   const url = `https://newsapi.org/v2/everything?q=history&apiKey=${apiKey}`;
 
   useEffect(() => {
