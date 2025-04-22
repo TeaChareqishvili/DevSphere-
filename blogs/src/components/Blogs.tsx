@@ -1,9 +1,13 @@
-import { ArticleTypes } from "../hooks/useFetchSportData";
-// TODO fix type any
+import { faHeart as solidHeart } from "@fortawesome/free-solid-svg-icons"; // filled
+import { faHeart as regularHeart } from "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+// TODO fix any
+
 export default function Blogs({ blog }: any) {
   return (
     <>
-      {blog.map((item: ArticleTypes) => (
+      {blog.map((item: any) => (
         <div key={item.id} className="blog">
           <div className="blog-image">
             <img src={item.urlToImage} alt="Blog-Image-Not-Available" />.
@@ -17,7 +21,8 @@ export default function Blogs({ blog }: any) {
               Read More
             </a>
           </div>
-          {/* <FontAwesomeIcon icon={solidStar} color="gold" /> */}
+          <FontAwesomeIcon icon={solidHeart} color="gold" />
+          <FontAwesomeIcon icon={regularHeart} color="gray" />
         </div>
       ))}
     </>

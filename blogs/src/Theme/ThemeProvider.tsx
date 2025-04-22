@@ -1,6 +1,6 @@
 import { useState, createContext, ReactNode } from "react";
 
-type ThemeProviderProps = {
+export type ProviderProps = {
   children: ReactNode;
 };
 
@@ -19,7 +19,7 @@ const defaultContextValue: ThemeContextType = {
 export const ThemeContext =
   createContext<ThemeContextType>(defaultContextValue);
 
-export default function ThemeProvider({ children }: ThemeProviderProps) {
+export default function ThemeProvider({ children }: ProviderProps) {
   const [theme, setTheme] = useState("light");
   const [headerTheme, setHeaderTheme] = useState("header-light");
 
