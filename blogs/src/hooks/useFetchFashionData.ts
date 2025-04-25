@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ArticleTypes } from "./useFetchSportData";
+import { ArticleTypes } from "../type";
 
 // TODO url
 
@@ -24,7 +24,7 @@ function useFetchFashionArticles() {
     };
 
     fetchArticles();
-  }, []);
+  }, [url]);
 
   return { articles };
 }

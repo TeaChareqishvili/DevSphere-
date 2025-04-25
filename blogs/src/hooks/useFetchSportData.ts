@@ -1,16 +1,5 @@
 import { useState, useEffect } from "react";
-
-export type ArticleTypes = {
-  id: number;
-  author: string;
-  content: string;
-  description: string;
-  publishedAt: string;
-  source: { id: null; name: string };
-  title: string;
-  url: string;
-  urlToImage: string;
-};
+import { ArticleTypes } from "../type";
 
 function useFetchSportArticles() {
   const [articles, setArticles] = useState<ArticleTypes[]>([]);
@@ -33,7 +22,7 @@ function useFetchSportArticles() {
     };
 
     fetchArticles();
-  }, []);
+  }, [url]);
 
   return { articles };
 }

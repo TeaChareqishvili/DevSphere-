@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ArticleTypes } from "./useFetchSportData";
+import { ArticleTypes } from "../type";
 
 function useFetchHistoryArticles() {
   const [articles, setArticles] = useState<ArticleTypes[]>([]);
@@ -22,7 +22,7 @@ function useFetchHistoryArticles() {
     };
 
     fetchArticles();
-  }, []);
+  }, [url]);
 
   return { articles };
 }

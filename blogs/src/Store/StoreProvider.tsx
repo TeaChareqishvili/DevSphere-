@@ -2,25 +2,34 @@ import { createContext, useState } from "react";
 import { ProviderProps } from "../Theme/ThemeProvider";
 
 type FavoriteBlogsTypes = {
-  id: number[];
-  toggleHeart: (id: number) => void;
+  favorites: string[];
+  addFavorite: (url: string) => void;
+  removeFavorite: (url: string) => void;
 };
 
 export const FavoriteBlogContext = createContext<FavoriteBlogsTypes>({
-  id: [],
-  toggleHeart: () => {},
+  favorites: [],
+  addFavorite: () => {},
+  removeFavorite: () => {},
 });
 
 export default function FavoriteBlogProvider({ children }: ProviderProps) {
-  const [favorite, setFavorite] = useState<number[]>([]);
+  const [favorite, setFavorite] = useState<string[]>([]);
 
-  const toggleFavoriteBlog = (id: number) => {
-    setFavorite((currentBlog) => [...currentBlog, id]);
+  const addFavoriteBlog = (url: string) => {
+    setFavorite((currentBlog) => [...currentBlog, url]);
+  };
+
+  const removeFavorite = (url: string) => {
+    setFavorite((currentUrl) =>
+      currentUrl.filter((blogUrl) => blogUrl !== url)
+    );
   };
 
   const value = {
-    id: favorite,
-    toggleHeart: toggleFavoriteBlog,
+    favorites: favorite,
+    addFavorite: addFavoriteBlog,
+    removeFavorite: removeFavorite,
   };
   return (
     <FavoriteBlogContext.Provider value={value}>

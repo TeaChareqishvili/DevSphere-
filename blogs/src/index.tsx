@@ -4,14 +4,17 @@ import "./index.css";
 import App from "./App";
 import ThemeProvider from "./Theme/ThemeProvider";
 import { BrowserRouter } from "react-router-dom";
+import FavoriteBlogProvider from "./Store/StoreProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root")!);
 root.render(
   <React.StrictMode>
-    <ThemeProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </ThemeProvider>
+    <FavoriteBlogProvider>
+      <ThemeProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </ThemeProvider>
+    </FavoriteBlogProvider>
   </React.StrictMode>
 );
