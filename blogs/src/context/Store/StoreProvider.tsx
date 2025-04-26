@@ -1,11 +1,6 @@
 import { createContext, useState } from "react";
-import { ProviderProps } from "../Theme/ThemeProvider";
 
-type FavoriteBlogsTypes = {
-  favorites: string[];
-  addFavorite: (url: string) => void;
-  removeFavorite: (url: string) => void;
-};
+import { FavoriteBlogsTypes, ProviderProps } from "../../type";
 
 export const FavoriteBlogContext = createContext<FavoriteBlogsTypes>({
   favorites: [],
@@ -14,16 +9,14 @@ export const FavoriteBlogContext = createContext<FavoriteBlogsTypes>({
 });
 
 export default function FavoriteBlogProvider({ children }: ProviderProps) {
-  const [favorite, setFavorite] = useState<string[]>([]);
+  const [favorite, setFavorite] = useState<number[]>([]);
 
-  const addFavoriteBlog = (url: string) => {
-    setFavorite((currentBlog) => [...currentBlog, url]);
+  const addFavoriteBlog = (id: number) => {
+    setFavorite((currentBlog) => [...currentBlog, id]);
   };
 
-  const removeFavorite = (url: string) => {
-    setFavorite((currentUrl) =>
-      currentUrl.filter((blogUrl) => blogUrl !== url)
-    );
+  const removeFavorite = (id: number) => {
+    setFavorite((currentId) => currentId.filter((blogId) => blogId !== id));
   };
 
   const value = {

@@ -1,11 +1,10 @@
-import FashionBlogs from "./components/FashionBlogs";
 import FavoriteBlogs from "./components/FavoriteBlogs";
 import Header from "./components/Header";
-import HistoryBlogs from "./components/HistoryBlogs";
-import SportBlogs from "./components/SportBlogs";
-import { ThemeContext } from "./Theme/ThemeProvider";
+
 import { useContext } from "react";
 import { Routes, Route } from "react-router-dom";
+import AllBlogs from "./components/AllBlogs";
+import { ThemeContext } from "./context/Theme/ThemeProvider";
 
 function App() {
   const { theme } = useContext(ThemeContext);
@@ -13,9 +12,8 @@ function App() {
     <div className={`App ${theme}`}>
       <Header />
       <Routes>
-        <Route path="/" element={<SportBlogs />} />
-        <Route path="/history" element={<HistoryBlogs />} />
-        <Route path="/fashion" element={<FashionBlogs />} />
+        <Route path="/" element={<AllBlogs />} />
+
         <Route path="/favorite" element={<FavoriteBlogs />} />
       </Routes>
     </div>

@@ -3,7 +3,7 @@ import Navigation from "./Navigation";
 import { useContext } from "react";
 
 import ThemeSwitcher from "./ThemeSwitcher";
-import { ThemeContext } from "../Theme/ThemeProvider";
+import { ThemeContext } from "../context/Theme/ThemeProvider";
 
 export default function Header() {
   const { headerTheme } = useContext(ThemeContext);

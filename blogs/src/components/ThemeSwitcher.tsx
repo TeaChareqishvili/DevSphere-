@@ -1,7 +1,8 @@
 import { useContext } from "react";
-import { ThemeContext } from "../Theme/ThemeProvider";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import { ThemeContext } from "../context/Theme/ThemeProvider";
 
 export default function ThemeSwitcher() {
   const { toggleTheme, theme } = useContext(ThemeContext);

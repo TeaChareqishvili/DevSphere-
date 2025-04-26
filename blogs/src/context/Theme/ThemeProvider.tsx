@@ -1,14 +1,5 @@
-import { useState, createContext, ReactNode } from "react";
-
-export type ProviderProps = {
-  children: ReactNode;
-};
-
-type ThemeContextType = {
-  theme: string;
-  toggleTheme: () => void;
-  headerTheme: string;
-};
+import { useState, createContext } from "react";
+import { ProviderProps, ThemeContextType } from "../../type";
 
 const defaultContextValue: ThemeContextType = {
   theme: "light",

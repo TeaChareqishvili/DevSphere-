@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
-import { ThemeContext } from "../Theme/ThemeProvider";
+import { ThemeContext } from "../context/Theme/ThemeProvider";
 
 //TODO underline active link
 
@@ -14,21 +14,7 @@ export default function Navigation() {
           className="navigation-list"
           to="/"
         >
-          Sport Blogs
-        </NavLink>
-        <NavLink
-          style={{ color: theme === "light" ? "#10474f" : "#ffffff" }}
-          className="navigation-list"
-          to="/fashion"
-        >
-          Fashion Blogs
-        </NavLink>
-        <NavLink
-          style={{ color: theme === "light" ? "#10474f" : "#ffffff" }}
-          className="navigation-list"
-          to="/history"
-        >
-          History Blogs
+          All Blogs
         </NavLink>
         <NavLink
           style={{ color: theme === "light" ? "#10474f" : "#ffffff" }}

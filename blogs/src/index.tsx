@@ -2,9 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import ThemeProvider from "./Theme/ThemeProvider";
+
 import { BrowserRouter } from "react-router-dom";
-import FavoriteBlogProvider from "./Store/StoreProvider";
+import FavoriteBlogProvider from "./context/Store/StoreProvider";
+import ThemeProvider from "./context/Theme/ThemeProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root")!);
 root.render(
