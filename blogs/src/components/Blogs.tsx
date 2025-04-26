@@ -9,7 +9,7 @@ export default function Blogs({ data }: ArticleArrayType) {
   const { favorites, removeFavorite, addFavorite } =
     useContext(FavoriteBlogContext);
 
-  // TODO refactor styles and add loader
+  // TODO refactor styles
 
   return (
     <>

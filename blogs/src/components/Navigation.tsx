@@ -34,6 +34,24 @@ export default function Navigation() {
         >
           Profile
         </NavLink>
+        <NavLink
+          style={({ isActive }) => ({
+            color: isActive ? "red" : theme === "light" ? "#10474f" : "#ffffff",
+          })}
+          className="navigation-list"
+          to="/sign-in"
+        >
+          Sign In
+        </NavLink>
+        <NavLink
+          style={({ isActive }) => ({
+            color: isActive ? "red" : theme === "light" ? "#10474f" : "#ffffff",
+          })}
+          className="navigation-list"
+          to="/sign-up"
+        >
+          Sign Up
+        </NavLink>
       </nav>
     </>
   );
