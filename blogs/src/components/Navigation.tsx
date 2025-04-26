@@ -25,6 +25,15 @@ export default function Navigation() {
         >
           Favorite Blogs
         </NavLink>
+        <NavLink
+          style={({ isActive }) => ({
+            color: isActive ? "red" : theme === "light" ? "#10474f" : "#ffffff",
+          })}
+          className="navigation-list"
+          to="/profile"
+        >
+          Profile
+        </NavLink>
       </nav>
     </>
   );

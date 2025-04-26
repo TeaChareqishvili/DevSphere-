@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { Routes, Route } from "react-router-dom";
 import AllBlogs from "./components/AllBlogs";
 import { ThemeContext } from "./context/Theme/ThemeProvider";
+import Profile from "./components/Profile";
 
 function App() {
   const { theme } = useContext(ThemeContext);
@@ -13,7 +14,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<AllBlogs />} />
-
+        <Route path="/profile" element={<Profile />} />
         <Route path="/favorite" element={<FavoriteBlogs />} />
       </Routes>
     </div>
