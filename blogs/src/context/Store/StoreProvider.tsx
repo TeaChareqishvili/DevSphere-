@@ -1,5 +1,4 @@
-import { createContext, useState } from "react";
-
+import { createContext, useState, useEffect } from "react";
 import { FavoriteBlogsTypes, ProviderProps } from "../../type";
 
 export const FavoriteBlogContext = createContext<FavoriteBlogsTypes>({
@@ -9,7 +8,14 @@ export const FavoriteBlogContext = createContext<FavoriteBlogsTypes>({
 });
 
 export default function FavoriteBlogProvider({ children }: ProviderProps) {
-  const [favorite, setFavorite] = useState<number[]>([]);
+  const [favorite, setFavorite] = useState<number[]>(() => {
+    const storedFavorites = localStorage.getItem("favorite-blogs");
+    return storedFavorites ? JSON.parse(storedFavorites) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("favorite-blogs", JSON.stringify(favorite));
+  }, [favorite]);
 
   const addFavoriteBlog = (id: number) => {
     setFavorite((currentBlog) => [...currentBlog, id]);
@@ -24,6 +30,7 @@ export default function FavoriteBlogProvider({ children }: ProviderProps) {
     addFavorite: addFavoriteBlog,
     removeFavorite: removeFavorite,
   };
+
   return (
     <FavoriteBlogContext.Provider value={value}>
       {children}
