@@ -10,12 +10,12 @@ import ThemeProvider from "./context/Theme/ThemeProvider";
 const root = ReactDOM.createRoot(document.getElementById("root")!);
 root.render(
   <React.StrictMode>
-    <FavoriteBlogProvider>
-      <ThemeProvider>
+    <ThemeProvider>
+      <FavoriteBlogProvider>
         <BrowserRouter>
           <App />
         </BrowserRouter>
-      </ThemeProvider>
-    </FavoriteBlogProvider>
+      </FavoriteBlogProvider>
+    </ThemeProvider>
   </React.StrictMode>
 );

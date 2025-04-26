@@ -29,7 +29,7 @@
 body,
 .App {
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 .light {
@@ -201,4 +201,26 @@ body,
   padding: 4px 8px;
   font-size: 12px;
   font-family: "roboto";
+}
+
+.no-blogs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.no-blogs h1 {
+  font-family: "italic";
+  font-size: 30px;
+  letter-spacing: 1.8px;
+}
+
+/* loader */
+
+.loader-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
