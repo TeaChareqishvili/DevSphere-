@@ -9,8 +9,6 @@ export default function Blogs({ data }: ArticleArrayType) {
   const { favorites, removeFavorite, addFavorite } =
     useContext(FavoriteBlogContext);
 
-  // TODO refactor styles
-
   return (
     <>
       {data.map((item) => {
@@ -24,21 +22,33 @@ export default function Blogs({ data }: ArticleArrayType) {
             <div className="blog-content">
               <h1>{item.title}</h1>
               <p className="description">{item.description}</p>
-              <p className="content">{item.tags}</p>
-              <p className="content">{item.positive_reactions_count}</p>
-              <span>{item.readable_publish_date}</span>
+              <div className="tags-container">
+                {item.tag_list.map((tag: string, index: number) => (
+                  <span key={index} className="tag">
+                    #{tag}
+                  </span>
+                ))}
+              </div>
+              <p className="content">
+                Positive Reactions -{item.positive_reactions_count}
+              </p>
+              <span className="content">
+                Published:{item.readable_publish_date}
+              </span>
               <a className="link" href={item.url}>
                 Read More
               </a>
             </div>
-            <FontAwesomeIcon
-              icon={isFavorite ? solidHeart : regularHeart}
-              color="red"
-              onClick={() =>
-                isFavorite ? removeFavorite(item.id) : addFavorite(item.id)
-              }
-              style={{ cursor: "pointer" }}
-            />
+            <div className="fav-icon-container">
+              <FontAwesomeIcon
+                icon={isFavorite ? solidHeart : regularHeart}
+                color="red"
+                onClick={() =>
+                  isFavorite ? removeFavorite(item.id) : addFavorite(item.id)
+                }
+                style={{ cursor: "pointer", width: "30px", height: "30px" }}
+              />
+            </div>
           </div>
         );
       })}

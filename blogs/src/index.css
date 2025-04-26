@@ -116,6 +116,7 @@ body,
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  position: relative;
 }
 
 .blog-content {
@@ -129,10 +130,11 @@ body,
 .blog-content h1 {
   font-size: 18px;
   font-family: "italic";
+  margin-bottom: 5px;
 }
 
 .blog-image {
-  max-width: 300px;
+  width: 100%;
   height: 200px;
   border-radius: 20px;
   overflow: hidden;
@@ -151,7 +153,6 @@ body,
 }
 .description {
   font-size: 16px;
-  margin: 5px 0;
   font-family: "roboto";
 }
 
@@ -174,4 +175,30 @@ body,
 }
 .link:hover {
   text-decoration: underline;
+}
+
+.fav-icon-container {
+  background-color: #d1d4d6;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  right: 30px;
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  margin: 3px 0;
+}
+
+.tag {
+  padding: 4px 8px;
+  font-size: 12px;
+  font-family: "roboto";
 }
