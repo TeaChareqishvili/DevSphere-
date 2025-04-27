@@ -4,6 +4,7 @@ import { useContext } from "react";
 
 import ThemeSwitcher from "./ThemeSwitcher";
 import { ThemeContext } from "../context/Theme/ThemeProvider";
+import LogOut from "./autho/LogOut";
 
 export default function Header() {
   const { headerTheme } = useContext(ThemeContext);
@@ -15,6 +16,7 @@ export default function Header() {
         </div>
         <Navigation />
         <ThemeSwitcher />
+        <LogOut />
       </div>
     </div>
   );
