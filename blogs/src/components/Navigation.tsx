@@ -1,11 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { ThemeContext } from "../context/Theme/ThemeProvider";
-import { useUser } from "@clerk/clerk-react";
 
 export default function Navigation() {
-  const { isSignedIn } = useUser();
-
   const { theme } = useContext(ThemeContext);
 
   return (
@@ -29,22 +26,6 @@ export default function Navigation() {
         >
           Favorite Blogs
         </NavLink>
-        {isSignedIn && (
-          <NavLink
-            style={({ isActive }) => ({
-              color: isActive
-                ? "red"
-                : theme === "light"
-                ? "#10474f"
-                : "#ffffff",
-            })}
-            className="navigation-list"
-            to="/profile"
-          >
-            Profile
-          </NavLink>
-        )}
-
         <NavLink
           style={({ isActive }) => ({
             color: isActive ? "red" : theme === "light" ? "#10474f" : "#ffffff",

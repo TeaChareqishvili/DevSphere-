@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { Routes, Route } from "react-router-dom";
 import AllBlogs from "./components/AllBlogs";
 import { ThemeContext } from "./context/Theme/ThemeProvider";
-import Profile from "./components/autho/Profile";
+
 import SignInPage from "./components/autho/SignInPage";
 import SignUpPage from "./components/autho/SignUpPage";
 
@@ -17,7 +17,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<AllBlogs />} />
-        <Route path="/profile" element={<Profile />} />
+
         <Route path="/favorite" element={<FavoriteBlogs />} />
         <Route path="/sign-in" element={<SignInPage />} />
         <Route path="/sign-up" element={<SignUpPage />} />
