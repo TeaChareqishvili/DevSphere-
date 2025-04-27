@@ -1,5 +1,9 @@
 import { SignIn } from "@clerk/clerk-react";
 
 export default function SignInPage() {
-  return <SignIn />;
+  return (
+    <div className="auth-container">
+      <SignIn />
+    </div>
+  );
 }
