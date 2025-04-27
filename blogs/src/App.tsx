@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { Routes, Route } from "react-router-dom";
 import AllBlogs from "./components/AllBlogs";
 import { ThemeContext } from "./context/Theme/ThemeProvider";
-import Profile from "./components/Profile";
+import Profile from "./components/autho/Profile";
 import SignInPage from "./components/autho/SignInPage";
 import SignUpPage from "./components/autho/SignUpPage";
 

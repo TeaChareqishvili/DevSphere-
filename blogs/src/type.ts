@@ -58,3 +58,14 @@ export type ThemeContextType = {
   toggleTheme: () => void;
   headerTheme: string;
 };
+
+export type BlogDetailProps = {
+  item: {
+    url: string;
+  };
+};
+
+export type PopUpTypes = {
+  setShowWarning: (value: boolean) => void;
+  handleGoToSignIn: () => void;
+};
