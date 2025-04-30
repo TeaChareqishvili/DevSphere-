@@ -3,8 +3,10 @@ import { FavoriteBlogContext } from "../../context/Store/StoreProvider";
 import { faHeart as solidHeart } from "@fortawesome/free-solid-svg-icons";
 import { faHeart as regularHeart } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import { ArticleArrayType } from "../../type";
 import BlogDetail from "./BlogDetail";
+import { faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
 
 export default function Blogs({ data }: ArticleArrayType) {
   const { favorites, removeFavorite, addFavorite } =
@@ -30,12 +32,16 @@ export default function Blogs({ data }: ArticleArrayType) {
                   </span>
                 ))}
               </div>
-              <p className="content">
-                Positive Reactions -{item.positive_reactions_count}
-              </p>
-              <span className="content">
-                Published:{item.readable_publish_date}
-              </span>
+              <div className="reaction-container">
+                <FontAwesomeIcon icon={faThumbsUp} />
+                <span className="reaction-count">
+                  {item.positive_reactions_count}
+                </span>
+              </div>
+              <div className="published-date">
+                <FontAwesomeIcon icon={faCalendarAlt} />
+                <span>{item.readable_publish_date}</span>
+              </div>
               <BlogDetail item={item} />
             </div>
             <div className="fav-icon-container">
