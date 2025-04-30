@@ -1,6 +1,7 @@
-import useFetchData from "../hooks/useFetchData";
-import Blogs from "./Blogs";
-import Loader from "./Loader";
+import useFetchData from "../../hooks/useFetchData";
+
+import Loader from "../Loader";
+import Blogs from "../blogs/Blogs";
 
 export default function AllBlogs() {
   const { articles, loading } = useFetchData();

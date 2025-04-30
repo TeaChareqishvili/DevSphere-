@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { BlogDetailProps } from "../type";
+import { BlogDetailProps } from "../../type";
 import { useUser } from "@clerk/clerk-react";
-import PopUp from "./PopUp";
+import PopUp from "../PopUp";
 
 export default function BlogDetail({ item }: BlogDetailProps) {
   const { isSignedIn } = useUser();

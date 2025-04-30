@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { FavoriteBlogContext } from "../context/Store/StoreProvider";
+import { FavoriteBlogContext } from "../../context/Store/StoreProvider";
 import Blogs from "./Blogs";
-import useFetchData from "../hooks/useFetchData";
-import Loader from "./Loader";
+import useFetchData from "../../hooks/useFetchData";
+import Loader from "../Loader";
 
 export default function FavoriteBlogs() {
   const { favorites } = useContext(FavoriteBlogContext);

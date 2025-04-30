@@ -69,3 +69,17 @@ export type PopUpTypes = {
   setShowWarning: (value: boolean) => void;
   handleGoToSignIn: () => void;
 };
+
+export type BurgerMenuTypes = {
+  showMenu: boolean;
+  setShowMenu: (value: boolean) => void;
+};
+
+export type BurgerMenuClose = {
+  setShowMenu: (value: boolean) => void;
+};
+
+export type NavigationProps = {
+  flexdirection: "row" | "column";
+  marginBottom: string;
+};

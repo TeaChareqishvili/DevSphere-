@@ -8,7 +8,7 @@ export default function ThemeSwitcher() {
   const { toggleTheme, theme } = useContext(ThemeContext);
 
   return (
-    <div onClick={toggleTheme}>
+    <div onClick={toggleTheme} style={{ marginRight: "15px" }}>
       {theme === "light" ? (
         <FontAwesomeIcon icon={faMoon} className="theme-icon" />
       ) : (
