@@ -437,3 +437,20 @@ body,
     }
   }
 }
+
+@media (max-width: 525px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .blog-container {
+    padding: 0;
+  }
+  .burger-menu-inner-container {
+    padding: 15px;
+  }
+
+  .navigation-nav {
+    align-items: flex-start;
+  }
+}
