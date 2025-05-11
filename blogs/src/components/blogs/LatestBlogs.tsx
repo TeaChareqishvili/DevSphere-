@@ -9,10 +9,13 @@ export default function LatestBlogs() {
   const fiveDaysAgo = new Date();
   fiveDaysAgo.setDate(now.getDate() - 3);
 
-  const latestArticles = articles.filter((article) => {
-    const publishedDate = new Date(article.published_timestamp);
-    return publishedDate >= fiveDaysAgo;
-  });
+  const latestArticles = articles
+    .filter((article) => new Date(article.published_timestamp) >= fiveDaysAgo)
+    .sort(
+      (a, b) =>
+        new Date(b.published_timestamp).getTime() -
+        new Date(a.published_timestamp).getTime()
+    );
 
   if (loading) {
     return <Loader />;
