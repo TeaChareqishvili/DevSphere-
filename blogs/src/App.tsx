@@ -7,8 +7,9 @@ import { Routes, Route } from "react-router-dom";
 import { ThemeContext } from "./context/Theme/ThemeProvider";
 
 import SignInPage from "./components/autho/SignInPage";
-import SignUpPage from "./components/autho/SignUpPage";
+
 import AllBlogs from "./components/blogs/AllBlogs";
+import LatestBlogs from "./components/blogs/LatestBlogs";
 
 function App() {
   const { theme } = useContext(ThemeContext);
@@ -19,8 +20,8 @@ function App() {
       <Routes>
         <Route path="/" element={<AllBlogs />} />
         <Route path="/favorite" element={<FavoriteBlogs />} />
+        <Route path="/latest" element={<LatestBlogs />} />
         <Route path="/sign-in" element={<SignInPage />} />
-        <Route path="/sign-up" element={<SignUpPage />} />
       </Routes>
     </div>
   );

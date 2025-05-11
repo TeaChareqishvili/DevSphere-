@@ -34,6 +34,16 @@ export default function Navigation({
         >
           Favorite Blogs
         </NavLink>
+        <NavLink
+          style={({ isActive }) => ({
+            color: isActive ? "red" : theme === "light" ? "#10474f" : "#ffffff",
+            marginBottom: marginBottom,
+          })}
+          className="navigation-list"
+          to="/latest"
+        >
+          Latest Blogs
+        </NavLink>
         {!user && (
           <>
             <NavLink
@@ -49,20 +59,6 @@ export default function Navigation({
               to="/sign-in"
             >
               Sign In
-            </NavLink>
-            <NavLink
-              style={({ isActive }) => ({
-                color: isActive
-                  ? "red"
-                  : theme === "light"
-                  ? "#10474f"
-                  : "#ffffff",
-                marginBottom: marginBottom,
-              })}
-              className="navigation-list"
-              to="/sign-up"
-            >
-              Sign Up
             </NavLink>
           </>
         )}
