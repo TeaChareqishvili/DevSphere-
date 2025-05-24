@@ -5,6 +5,7 @@ import { useUser } from "@clerk/clerk-react";
 
 export default function LogOut() {
   const { user } = useUser();
+
   return (
     <>
       {user && (

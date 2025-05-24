@@ -1,13 +1,9 @@
 import FavoriteBlogs from "./components/blogs/FavoriteBlogs";
 import Header from "./components/Header";
-
 import { useContext } from "react";
 import { Routes, Route } from "react-router-dom";
-
 import { ThemeContext } from "./context/Theme/ThemeProvider";
-
 import SignInPage from "./components/autho/SignInPage";
-
 import AllBlogs from "./components/blogs/AllBlogs";
 import LatestBlogs from "./components/blogs/LatestBlogs";
 

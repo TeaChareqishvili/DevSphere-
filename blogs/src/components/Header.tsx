@@ -9,6 +9,7 @@ import LogOut from "./autho/LogOut";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import BurgerMenu from "./BurgerMenu";
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
   const [showMenu, setShowMenu] = useState<boolean>(false);
@@ -21,9 +22,11 @@ export default function Header() {
   return (
     <div className={`header-container-outer ${headerTheme}`}>
       <div className="header-container-inner">
-        <div className="image">
-          <img src={logo} alt="logo" />
-        </div>
+        <NavLink to="/">
+          <div className="image">
+            <img src={logo} alt="logo" />
+          </div>
+        </NavLink>
         <div className="desktop-navigation">
           <Navigation flexdirection="row" marginBottom="0" />
         </div>

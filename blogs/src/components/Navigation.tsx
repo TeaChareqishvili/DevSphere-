@@ -10,6 +10,7 @@ export default function Navigation({
 }: NavigationProps) {
   const { theme } = useContext(ThemeContext);
   const { user } = useUser();
+  console.log(user, "user");
 
   return (
     <>
@@ -44,7 +45,7 @@ export default function Navigation({
         >
           Latest Blogs
         </NavLink>
-        {!user && (
+        {!user ? (
           <>
             <NavLink
               style={({ isActive }) => ({
@@ -61,6 +62,8 @@ export default function Navigation({
               Sign In
             </NavLink>
           </>
+        ) : (
+          <li className="navigation-list"> Hello {user.firstName} !</li>
         )}
       </nav>
     </>
