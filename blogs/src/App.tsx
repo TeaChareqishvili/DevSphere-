@@ -14,7 +14,7 @@ function App() {
     <div className={`App ${theme}`}>
       <Header />
       <Routes>
-        <Route path="/DevSphere-" element={<AllBlogs />} />
+        <Route path="/DevSphere-/" element={<AllBlogs />} />
         <Route path="/favorite" element={<FavoriteBlogs />} />
         <Route path="/latest" element={<LatestBlogs />} />
         <Route path="/sign-in" element={<SignInPage />} />
