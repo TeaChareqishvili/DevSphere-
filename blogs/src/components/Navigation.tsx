@@ -10,7 +10,6 @@ export default function Navigation({
 }: NavigationProps) {
   const { theme } = useContext(ThemeContext);
   const { user } = useUser();
-  console.log(user, "user");
 
   return (
     <>
