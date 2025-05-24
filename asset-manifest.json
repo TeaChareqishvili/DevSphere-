@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/TeaChareqishvili.github.io/DevSphere-/static/css/main.04cd0041.css",
-    "main.js": "/TeaChareqishvili.github.io/DevSphere-/static/js/main.fd0d170e.js",
-    "static/media/PlaywriteAUSA-Regular.ttf": "/TeaChareqishvili.github.io/DevSphere-/static/media/PlaywriteAUSA-Regular.981bbdd52ab9274c6969.ttf",
-    "static/media/PTSerif-Regular.ttf": "/TeaChareqishvili.github.io/DevSphere-/static/media/PTSerif-Regular.6271ca9bf4c029802fc0.ttf",
-    "static/media/Roboto-Black.ttf": "/TeaChareqishvili.github.io/DevSphere-/static/media/Roboto-Black.b1cacdcefbeb5ff74e75.ttf",
-    "static/media/blog-logo.png": "/TeaChareqishvili.github.io/DevSphere-/static/media/blog-logo.3c0917c46c43bb663228.png",
-    "index.html": "/TeaChareqishvili.github.io/DevSphere-/index.html",
-    "main.04cd0041.css.map": "/TeaChareqishvili.github.io/DevSphere-/static/css/main.04cd0041.css.map",
-    "main.fd0d170e.js.map": "/TeaChareqishvili.github.io/DevSphere-/static/js/main.fd0d170e.js.map"
+    "main.css": "/DevSphere-/static/css/main.52991b0e.css",
+    "main.js": "/DevSphere-/static/js/main.7f3eeb50.js",
+    "static/media/PlaywriteAUSA-Regular.ttf": "/DevSphere-/static/media/PlaywriteAUSA-Regular.981bbdd52ab9274c6969.ttf",
+    "static/media/PTSerif-Regular.ttf": "/DevSphere-/static/media/PTSerif-Regular.6271ca9bf4c029802fc0.ttf",
+    "static/media/Roboto-Black.ttf": "/DevSphere-/static/media/Roboto-Black.b1cacdcefbeb5ff74e75.ttf",
+    "static/media/blog-logo.png": "/DevSphere-/static/media/blog-logo.3c0917c46c43bb663228.png",
+    "index.html": "/DevSphere-/index.html",
+    "main.52991b0e.css.map": "/DevSphere-/static/css/main.52991b0e.css.map",
+    "main.7f3eeb50.js.map": "/DevSphere-/static/js/main.7f3eeb50.js.map"
   },
   "entrypoints": [
-    "static/css/main.04cd0041.css",
-    "static/js/main.fd0d170e.js"
+    "static/css/main.52991b0e.css",
+    "static/js/main.7f3eeb50.js"
   ]
 }
