@@ -20,7 +20,7 @@ export default function Navigation({
             marginBottom: marginBottom,
           })}
           className="navigation-list"
-          to="/DevSphere-/"
+          to="/DevSphere-"
         >
           All Blogs
         </NavLink>

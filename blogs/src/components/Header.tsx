@@ -22,7 +22,7 @@ export default function Header() {
   return (
     <div className={`header-container-outer ${headerTheme}`}>
       <div className="header-container-inner">
-        <NavLink to="/DevSphere-/">
+        <NavLink to="/DevSphere-">
           <div className="image">
             <img src={logo} alt="logo" />
           </div>

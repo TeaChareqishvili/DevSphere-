@@ -2,7 +2,7 @@
   "name": "blogs",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/TeaChareqishvili.github.io/DevSphere-/",
+  "homepage": "https://teachareqishvili.github.io/DevSphere-",
   "dependencies": {
     "@clerk/clerk-react": "^5.30.0",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
